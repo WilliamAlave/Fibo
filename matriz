@@ -1,0 +1,35 @@
+#include <iostream>
+#include <string.h>
+
+using namespace std;
+
+int main()
+{
+    int dim_matriz;
+    cout<<"ingres e la dimension  de la matriz: "<<endl;
+    cin>>dim_matriz;
+    int m1[dim_matriz][dim_matriz],m2[dim_matriz][dim_matriz];
+    int result[dim_matriz][dim_matriz];
+    for(int i=0;i<dim_matriz;i++){
+        for(int j=0;j<dim_matriz;j++){
+            cout<<"pos ["<<i+1<<"]["<<j+1<<"] ";
+            cin>>m1[i][j];
+        }
+    }
+    cout<<"Segunda matriz"<<endl;
+    for(int i=0;i<dim_matriz;i++){
+        for(int j=0;j<dim_matriz;j++){
+            cout<<"pos ["<<i+1<<"]["<<j+1<<"] ";
+            cin>>m2[i][j];
+        }
+    }
+    cout<<"Resultado =>"<<endl;
+    for(int i=0;i<dim_matriz;i++){
+        for(int j=0;j<dim_matriz;j++){
+            result[i][j]=m1[i][j]*m2[j][i];
+            cout<<result[i][j]<<" ";
+        }
+        cout<<endl;
+    }
+    return 0;
+}
